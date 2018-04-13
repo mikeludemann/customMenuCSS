@@ -1,0 +1,116 @@
+div
+    float left
+
+.start_pointy_corners
+    height 100px
+    width 75px
+    background #d15e00
+    position relative
+    &:before
+        width 0
+        content ''
+        position absolute
+        top 0
+        right 0
+        border-top 50px solid #ffffff
+        border-left 25px solid #d15e00
+        border-bottom 50px solid #ffffff
+
+.end_pointy_corners
+    height 100px
+    width 50px
+    background #d15e00
+    position relative
+    margin-left 26px
+    &:before
+        width 0
+        content ''
+        position absolute
+        top 0
+        left -25px
+        border-top 50px solid #d15e00
+        border-right 25px solid transparent
+        border-bottom 50px solid #d15e00
+        transform rotate(180deg)
+
+.middle_pointy_corners
+    height 100px
+    width 50px
+    background #d15e00
+    position relative
+    margin-left 1px
+    &:before
+        width 0
+        content ''
+        position absolute
+        top 0
+        left -25px
+        border-top 50px solid #d15e00
+        border-right 25px solid transparent
+        border-bottom 50px solid #d15e00
+        transform rotate(180deg)
+    &:after
+        width 0
+        content ''
+        position absolute
+        top 0
+        right -25px
+        border-top 50px solid transparent
+        border-left 25px solid #d15e00
+        border-bottom 50px solid transparent
+
+.start_oblique_line
+    height 100px
+    width 75px
+    background #d15e00
+    position relative
+    &:after
+        width 0
+        content ''
+        position absolute
+        top 0
+        right -50px
+        border-top 100px solid transparent
+        border-right 50px solid #d15e00
+        transform rotate(180deg)
+
+.end_oblique_line
+    height 100px
+    width 50px
+    background #d15e00
+    position relative
+    margin-left 26px
+    &:before
+        width 0
+        content ''
+        position absolute
+        top 0
+        left -50px
+        border-top 100px solid transparent
+        border-right 50px solid #d15e00
+
+.middle_oblique_line
+    height 100px
+    width 100px
+    background #d15e00
+    position relative
+    margin-left 51px
+    margin-right 0px
+    z-index -1
+    &:before
+        width 0
+        content ''
+        position absolute
+        top 0
+        left -50px
+        border-top 100px solid transparent
+        border-right 50px solid #d15e00
+    &:after
+        width 0
+        content ''
+        position absolute
+        top 0
+        right -25px
+        border-top 100px solid #fff
+        border-right 50px solid #d15e00
+        transform rotate(180deg)
