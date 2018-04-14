@@ -1,12 +1,22 @@
-div {
+.container {
+	clear: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+.container div {
 	float: left;
 }
+
+
+/* First */
 
 .start_pointy_corners {
 	height: 100px;
 	width: 75px;
 	background: #d15e00;
 	position: relative;
+	margin-right: -25px !important;
 }
 
 .start_pointy_corners:before {
@@ -40,12 +50,20 @@ div {
 	transform: rotate(180deg);
 }
 
-.middle_pointy_corners {
+.middle_pointy_corners:nth-of-type(1) {
 	height: 100px;
 	width: 50px;
 	background: #d15e00;
 	position: relative;
-	margin-left: 1px;
+	margin-left: 1px !important;
+}
+
+.middle_pointy_corners:not(:nth-of-type(1)) {
+	height: 100px;
+	width: 50px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px;
 }
 
 .middle_pointy_corners:before {
@@ -71,11 +89,96 @@ div {
 	border-bottom: 50px solid transparent;
 }
 
+
+/* Second */
+
+.start_pointy_corners_reverse {
+	height: 100px;
+	width: 75px;
+	background: #d15e00;
+	position: relative;
+	margin-right: -25px !important;
+}
+
+.start_pointy_corners_reverse:before {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-top: 50px solid #d15e00;
+	border-right: 25px solid #ffffff;
+	border-bottom: 50px solid #d15e00;
+}
+
+.end_pointy_corners_reverse {
+	height: 100px;
+	width: 50px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px;
+}
+
+.end_pointy_corners_reverse:before {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -25px;
+	border-top: 50px solid transparent;
+	border-left: 25px solid #d15e00;
+	border-bottom: 50px solid transparent;
+	transform: rotate(180deg);
+}
+
+.middle_pointy_corners_reverse:nth-of-type(1) {
+	height: 100px;
+	width: 50px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 1px !important;
+}
+
+.middle_pointy_corners_reverse:not(:nth-of-type(1)) {
+	height: 100px;
+	width: 50px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px;
+}
+
+.middle_pointy_corners_reverse:before {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -25px;
+	border-top: 50px solid transparent;
+	border-left: 25px solid #d15e00;
+	border-bottom: 50px solid transparent;
+	transform: rotate(180deg);
+}
+
+.middle_pointy_corners_reverse:after {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -25px;
+	border-top: 50px solid #d15e00;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #d15e00;
+}
+
+
+/* Third */
+
 .start_oblique_line {
 	height: 100px;
 	width: 75px;
 	background: #d15e00;
 	position: relative;
+	margin-right: 25px;
 }
 
 .start_oblique_line:after {
@@ -117,6 +220,16 @@ div {
 	z-index: -1;
 }
 
+.middle_oblique_line:not(:nth-of-type(1)) {
+	height: 100px;
+	width: 100px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px !important;
+	margin-right: 0px;
+	z-index: -1;
+}
+
 .middle_oblique_line:before {
 	width: 0;
 	content: '';
@@ -136,4 +249,85 @@ div {
 	border-top: 100px solid #fff;
 	border-right: 50px solid #d15e00;
 	transform: rotate(180deg);
+}
+
+
+/* Fourth */
+
+.start_oblique_line_reverse {
+	height: 100px;
+	width: 75px;
+	background: #d15e00;
+	position: relative;
+	margin-right: 25px;
+}
+
+.start_oblique_line_reverse:after {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -50px;
+	border-top: 100px solid transparent;
+	border-left: 50px solid #d15e00;
+}
+
+.end_oblique_line_reverse {
+	height: 100px;
+	width: 50px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px;
+}
+
+.end_oblique_line_reverse:before {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50px;
+	border-top: 100px solid transparent;
+	border-left: 50px solid #d15e00;
+	transform: rotate(180deg);
+}
+
+.middle_oblique_line_reverse {
+	height: 100px;
+	width: 100px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 51px;
+	margin-right: 0px;
+	z-index: -1;
+}
+
+.middle_oblique_line_reverse:not(:nth-of-type(1)) {
+	height: 100px;
+	width: 100px;
+	background: #d15e00;
+	position: relative;
+	margin-left: 26px !important;
+	margin-right: 0px;
+	z-index: -1;
+}
+
+.middle_oblique_line_reverse:before {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50px;
+	border-top: 100px solid transparent;
+	border-left: 50px solid #d15e00;
+	transform: rotate(180deg);
+}
+
+.middle_oblique_line_reverse:after {
+	width: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -25px;
+	border-top: 100px solid #fff;
+	border-left: 50px solid #d15e00;
 }
